@@ -61,7 +61,7 @@ class Line(pygame.sprite.Sprite):
         # coordinates = [(star.rect.x, star.rect.y) for star in stars_in_path]
         # self.image = pygame.draw.lines(points=coordinates, closed=False, color=(255, 255, 255), surface=screen)
         # self.rect = self.image
-        self.rect = pygame.rect.
+        # self.rect = pygame.rect.
 
 
 class Star(pygame.sprite.Sprite):

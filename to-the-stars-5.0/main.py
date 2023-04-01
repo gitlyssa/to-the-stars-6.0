@@ -19,11 +19,21 @@ stars.sort(key=lambda x: x.distance)
 # Initialize star positions
 initialize_star_positions(stars)
 
+# create the music
+pygame.mixer.music.load('music/ninja tuna.mp3')
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
+
+# line stuff
+
+
 
 def collisions(player_ship: Ship, stars: list[Star]):
     for star in stars:
         if player_ship.rect.colliderect(star.rect):
             player_ship.current_star = star
+            sound_effect = pygame.mixer.Sound('music/star ding.mp3')
+            sound_effect.play()
             print(player_ship.current_star)
 
 while True:
